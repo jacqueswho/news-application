@@ -8,14 +8,14 @@ plugins {
 }
 
 android {
-    namespace 'com.example.project'
+    namespace 'com.news.app'
 
     def localProperties = new Properties()
     localProperties.load(project.rootProject.file("local.properties").newDataInputStream())
     compileSdk rootProject.compiledSdkVersion
 
     defaultConfig {
-        applicationId "com.example.project"
+        applicationId "com.news.app"
         minSdk rootProject.minSdkVersion
         targetSdk rootProject.targetSdkVersion
         versionCode 1

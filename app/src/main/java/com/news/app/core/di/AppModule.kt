@@ -1,4 +1,4 @@
-package com.example.project.core.di
+package com.news.app.core.di
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

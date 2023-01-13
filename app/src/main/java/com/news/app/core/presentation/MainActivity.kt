@@ -1,8 +1,8 @@
-package com.example.project.core.presentation
+package com.news.app.core.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.project.R
+import com.news.app.R
 
 class MainActivity : AppCompatActivity() {
 

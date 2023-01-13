@@ -1,4 +1,4 @@
-package com.example.project
+package com.news.project
 
 import org.junit.Assert.*
 import org.junit.Test

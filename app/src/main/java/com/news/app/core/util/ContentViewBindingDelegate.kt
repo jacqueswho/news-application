@@ -1,4 +1,4 @@
-package com.example.project.core.util
+package com.news.app.core.util
 
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
