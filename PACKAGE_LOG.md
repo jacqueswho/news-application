@@ -38,3 +38,8 @@ Glide is a fast and efficient open source media management and
 image loading framework for Android that wraps media decoding, 
 memory and disk caching, and resource pooling into a simple and easy to use interface.
 - [glide](https://github.com/bumptech/glide)
+
+
+## Paging
+Used for paging for recycler view
+- [paging-runtime](https://developer.android.com/jetpack/androidx/releases/paging)
