@@ -1,6 +1,7 @@
 package com.news.app.core.data
 
 import androidx.paging.PagingSource
+import androidx.paging.PagingState
 import com.news.app.core.api.NewsApi
 import com.news.app.core.model.Article
 import java.io.IOException
@@ -35,5 +36,9 @@ class NewsPagingSource(
         } catch (exception: HttpException) {
             LoadResult.Error(exception)
         }
+    }
+
+    override fun getRefreshKey(state: PagingState<Int, Article>): Int? {
+        return null
     }
 }
