@@ -4,10 +4,16 @@
 
     <item
         android:id="@+id/action_Canada"
-        app:showAsAction="ifRoom"
-        android:title="@string/canada" />
+        android:title="@string/canada"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_USA"
-        app:showAsAction="ifRoom"
-        android:title="@string/usa" />
+        android:title="@string/usa"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_news_settings"
+        android:title="@string/news_settings"
+        app:showAsAction="collapseActionView"
+        />
 </menu>

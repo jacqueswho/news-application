@@ -76,6 +76,9 @@ dependencies {
     implementation "androidx.core:core-ktx:$ktxCoreVersion"
     implementation "androidx.recyclerview:recyclerview:$recyclerviewVersion"
 
+    // Preference Storage
+    implementation "androidx.preference:preference-ktx:$preferenceVersion"
+
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
@@ -102,6 +105,7 @@ dependencies {
     // Firebase
     implementation "com.google.firebase:firebase-crashlytics-ktx:$firebaseCrashlyticsVersion"
     implementation "com.google.firebase:firebase-analytics-ktx:$firebaseAnaylticsVersion"
+    implementation 'androidx.preference:preference:1.2.0'
 
     kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
 

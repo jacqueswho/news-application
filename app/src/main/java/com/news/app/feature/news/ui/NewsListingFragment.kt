@@ -45,6 +45,12 @@ class NewsListingFragment :
                 binding.rvNews.scrollToPosition(0)
                 return true
             }
+            R.id.action_news_settings -> {
+                val action =
+                    NewsListingFragmentDirections.actionNewsListingFragmentToSettingsActivity()
+                findNavController().navigate(action)
+                return true
+            }
         }
         return true
     }

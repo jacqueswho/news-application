@@ -21,7 +21,9 @@ class NewsViewModel @Inject constructor(
         private const val CURRENT_COUNTRY = "NEWS_CURRENT_COUNTRY"
     }
 
-    private val currentCountry = savedStateHandle.getLiveData(CURRENT_COUNTRY, DEFAULT_COUNTRY)
+    private var defaultCountry = newsRepository.getPreferredCountry() ?: DEFAULT_COUNTRY
+
+    private val currentCountry = savedStateHandle.getLiveData(CURRENT_COUNTRY, defaultCountry)
     val articles = currentCountry.switchMap { country ->
         newsRepository.getBreakingNewsArticlesByCountry(country).cachedIn(viewModelScope)
     }

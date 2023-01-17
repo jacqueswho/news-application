@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_newsListingFragment_to_newsDetailFragment"
             app:destination="@id/newsDetailFragment" />
+        <action
+            android:id="@+id/action_newsListingFragment_to_settingsActivity"
+            app:destination="@id/settingsActivity" />
     </fragment>
     <fragment
         android:id="@+id/newsDetailFragment"
@@ -28,4 +31,8 @@
             app:nullable="false"
             />
     </fragment>
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.news.app.core.presentation.SettingsActivity"
+        android:label="SettingsActivity" />
 </navigation>
