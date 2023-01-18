@@ -36,12 +36,12 @@ class NewsListingFragment :
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
         when (menuItem.itemId) {
             R.id.action_Canada -> {
-                viewModel.searchNewsByCountry(NewsViewModel.COUNTRIES.CANADA.country)
+                viewModel.searchNewsByCountry(NewsViewModel.Country.Canada)
                 binding.rvNews.scrollToPosition(0)
                 return true
             }
             R.id.action_USA -> {
-                viewModel.searchNewsByCountry(NewsViewModel.COUNTRIES.USA.country)
+                viewModel.searchNewsByCountry(NewsViewModel.Country.USA)
                 binding.rvNews.scrollToPosition(0)
                 return true
             }

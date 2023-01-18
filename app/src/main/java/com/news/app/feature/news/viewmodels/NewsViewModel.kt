@@ -15,7 +15,11 @@ class NewsViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    enum class COUNTRIES(val country: String) { USA("us"), CANADA("ca") }
+    sealed class Country(val countryCode: String) {
+        object USA : Country("us")
+        object Canada : Country("ca")
+    }
+
     companion object {
         private const val DEFAULT_COUNTRY = "us"
         private const val CURRENT_COUNTRY = "NEWS_CURRENT_COUNTRY"
@@ -28,7 +32,7 @@ class NewsViewModel @Inject constructor(
         newsRepository.getBreakingNewsArticlesByCountry(country).cachedIn(viewModelScope)
     }
 
-    fun searchNewsByCountry(country: String) {
-        currentCountry.value = country
+    fun searchNewsByCountry(country: Country) {
+        currentCountry.value = country.countryCode
     }
 }
