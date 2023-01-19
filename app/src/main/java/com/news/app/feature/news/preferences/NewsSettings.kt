@@ -1,4 +1,4 @@
-package com.news.app.core.settings
+package com.news.app.feature.news.preferences
 
 import android.content.Context
 import androidx.preference.PreferenceManager

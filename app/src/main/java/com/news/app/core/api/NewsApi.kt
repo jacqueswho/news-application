@@ -1,7 +1,7 @@
 package com.news.app.core.api
 
-import ArticleResponse
 import com.news.app.BuildConfig
+import com.news.app.feature.news.model.ArticleResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

@@ -1,4 +1,4 @@
-import com.news.app.core.model.Article
+package com.news.app.feature.news.model
 
 data class ArticleResponse(
     val status: String,

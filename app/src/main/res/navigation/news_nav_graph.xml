@@ -24,7 +24,7 @@
         android:label="{newsArticleTitle}">
         <argument
             android:name="article"
-            app:argType="com.news.app.core.model.Article" />
+            app:argType="com.news.app.feature.news.model.Article" />
         <argument
             android:name="newsArticleTitle"
             app:argType="string"

@@ -5,13 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import com.news.app.core.data.NewsRepository
+import com.news.app.feature.news.data.repository.NewsRepositoryImpl
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class NewsViewModel @Inject constructor(
-    private val newsRepository: NewsRepository,
+    private val newsRepository: NewsRepositoryImpl,
     private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -29,7 +29,7 @@ class NewsViewModel @Inject constructor(
 
     private val currentCountry = savedStateHandle.getLiveData(CURRENT_COUNTRY, defaultCountry)
     val articles = currentCountry.switchMap { country ->
-        newsRepository.getBreakingNewsArticlesByCountry(country).cachedIn(viewModelScope)
+        newsRepository.getPagedBreakingNewsArticlesByCountry(country).cachedIn(viewModelScope)
     }
 
     fun searchNewsByCountry(country: Country) {

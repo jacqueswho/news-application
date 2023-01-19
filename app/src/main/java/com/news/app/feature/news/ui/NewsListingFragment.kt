@@ -13,8 +13,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.news.app.R
-import com.news.app.core.model.Article
 import com.news.app.databinding.FragmentNewsListingBinding
+import com.news.app.feature.news.model.Article
 import com.news.app.feature.news.ui.adapters.NewsAdapter
 import com.news.app.feature.news.ui.adapters.NewsArticleLoadStateAdapter
 import com.news.app.feature.news.viewmodels.NewsViewModel

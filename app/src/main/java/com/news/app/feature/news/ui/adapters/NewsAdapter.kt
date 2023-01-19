@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.news.app.R
-import com.news.app.core.model.Article
 import com.news.app.databinding.NewsArticleCardItemBinding
+import com.news.app.feature.news.model.Article
 
 class NewsAdapter(private val articleItemClickListener: ArticleItemClickListener) :
     PagingDataAdapter<Article, NewsAdapter.NewsArticleViewHolder>(ARTICLE_COMPARATOR) {
