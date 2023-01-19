@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- News Preference -->
+    <string name="preferred_country">PREFERRED_COUNTRY</string>
     <string-array name="news_country_entries">
         <item>USA</item>
         <item>Canada</item>

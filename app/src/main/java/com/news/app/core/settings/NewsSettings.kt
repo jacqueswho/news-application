@@ -10,10 +10,16 @@ import javax.inject.Singleton
 class NewsSettings @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
+
+    companion object {
+        private const val DEFAULT_COUNTRY = "us"
+        private const val PREFERENCES_KEY = "PREFERRED_COUNTRY"
+    }
+
     fun getPreferredCountry(): String? {
         val sharedPreferences =
             PreferenceManager.getDefaultSharedPreferences(context)
-        val country = sharedPreferences.getString("news_country", "us")
+        val country = sharedPreferences.getString(PREFERENCES_KEY, DEFAULT_COUNTRY)
         return country
     }
 }

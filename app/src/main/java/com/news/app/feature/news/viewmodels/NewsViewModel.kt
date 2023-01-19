@@ -35,4 +35,8 @@ class NewsViewModel @Inject constructor(
     fun searchNewsByCountry(country: Country) {
         currentCountry.value = country.countryCode
     }
+
+    fun searchNewsByDefaultCountry() {
+        currentCountry.value = defaultCountry
+    }
 }

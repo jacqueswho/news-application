@@ -6,7 +6,7 @@
             app:defaultValue="us"
             app:entries="@array/news_country_entries"
             app:entryValues="@array/news_country_values"
-            app:key="news_country"
+            app:key="@string/preferred_country"
             app:title="@string/country_selection_title"
             app:useSimpleSummaryProvider="true" />
 
