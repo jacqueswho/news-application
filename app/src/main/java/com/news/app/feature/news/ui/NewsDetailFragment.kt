@@ -6,7 +6,7 @@ import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import com.bumptech.glide.Glide
+import com.bumptech.glide.RequestManager
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
@@ -14,10 +14,14 @@ import com.bumptech.glide.request.target.Target
 import com.news.app.R
 import com.news.app.databinding.FragmentNewsDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class NewsDetailFragment : Fragment(R.layout.fragment_news_detail) {
     private val args by navArgs<NewsDetailFragmentArgs>()
+
+    @Inject
+    lateinit var glide: RequestManager
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,8 +29,7 @@ class NewsDetailFragment : Fragment(R.layout.fragment_news_detail) {
         val article = args.article
 
         binding.apply {
-            Glide.with(this@NewsDetailFragment)
-                .load(article.urlToImage)
+            glide.load(article.urlToImage)
                 .listener(object : RequestListener<Drawable> {
                     override fun onLoadFailed(
                         e: GlideException?,
@@ -49,7 +52,6 @@ class NewsDetailFragment : Fragment(R.layout.fragment_news_detail) {
                         return false
                     }
                 })
-                .error(R.drawable.ic_error)
                 .into(ivArticleImage)
             tvArticleAuthor.text = article.author
             tvArticleContent.text = article.content

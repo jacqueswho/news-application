@@ -1,4 +1,4 @@
-package com.news.app.feature.news.model
+package com.news.app.core.data.remote.news.model
 import java.io.Serializable
 import java.util.*
 

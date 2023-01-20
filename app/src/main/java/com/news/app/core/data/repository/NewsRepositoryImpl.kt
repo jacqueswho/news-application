@@ -1,22 +1,26 @@
-package com.news.app.feature.news.data.repository
+package com.news.app.core.data.repository
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.liveData
-import com.news.app.core.api.NewsApi
+import com.news.app.core.data.preferences.NewsPreferences
+import com.news.app.core.data.remote.news.NewsApi
+import com.news.app.core.domain.respository.NewsRepository
 import com.news.app.feature.news.data.NewsPagingSource
-import com.news.app.feature.news.domain.repository.NewsRepository
-import com.news.app.feature.news.preferences.NewsSettings
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class NewsRepositoryImpl @Inject constructor(
     private val newsApi: NewsApi,
-    private val newsSettings: NewsSettings
+    private val newsPreferences: NewsPreferences
 ) : NewsRepository {
 
-    override fun getPreferredCountry() = newsSettings.getPreferredCountry()
+    override fun getPreferredCountry() = newsPreferences.getPreferredCountry()
+
+    override fun setPreferredCountry(countryCode: String) {
+        newsPreferences.savePreferredCountry(countryCode)
+    }
 
     override fun getPagedBreakingNewsArticlesByCountry(country: String) =
         Pager(

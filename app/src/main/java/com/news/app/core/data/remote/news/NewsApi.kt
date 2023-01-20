@@ -1,7 +1,7 @@
-package com.news.app.core.api
+package com.news.app.core.data.remote.news
 
 import com.news.app.BuildConfig
-import com.news.app.feature.news.model.ArticleResponse
+import com.news.app.core.data.remote.news.model.ArticleResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -16,4 +16,8 @@ interface NewsApi {
         @Query("apiKey") apiKey: String =
             BuildConfig.NEWS_API_KEY
     ): Response<ArticleResponse>
+
+    companion object {
+        const val BASE_URL = "https://newsapi.org/v2/"
+    }
 }

@@ -2,8 +2,8 @@ package com.news.app.feature.news.data
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.news.app.core.api.NewsApi
-import com.news.app.feature.news.model.Article
+import com.news.app.core.data.remote.news.NewsApi
+import com.news.app.core.data.remote.news.model.Article
 import java.io.IOException
 import retrofit2.HttpException
 

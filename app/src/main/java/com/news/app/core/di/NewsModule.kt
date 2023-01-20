@@ -1,7 +1,6 @@
 package com.news.app.core.di
 
-import com.news.app.BuildConfig
-import com.news.app.core.api.NewsApi
+import com.news.app.core.data.remote.news.NewsApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 @Module
 @InstallIn(SingletonComponent::class)
-class ApiModule {
+object NewsModule {
 
     @Provides
     @Singleton
@@ -37,7 +36,7 @@ class ApiModule {
     @Singleton
     fun provideRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.NEWS_BASE_URL)
+            .baseUrl(NewsApi.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

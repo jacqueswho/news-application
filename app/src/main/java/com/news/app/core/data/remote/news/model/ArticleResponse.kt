@@ -1,4 +1,4 @@
-package com.news.app.feature.news.model
+package com.news.app.core.data.remote.news.model
 
 data class ArticleResponse(
     val status: String,
