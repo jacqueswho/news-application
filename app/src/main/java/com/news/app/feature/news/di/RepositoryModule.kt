@@ -1,7 +1,7 @@
-package com.news.app.core.di
+package com.news.app.feature.news.di
 
-import com.news.app.core.data.repository.NewsRepositoryImpl
-import com.news.app.core.domain.respository.NewsRepository
+import com.news.app.feature.news.data.repository.NewsRepositoryImpl
+import com.news.app.feature.news.domain.repository.NewsRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

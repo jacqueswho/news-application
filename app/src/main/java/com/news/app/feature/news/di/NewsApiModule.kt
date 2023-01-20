@@ -1,6 +1,6 @@
-package com.news.app.core.di
+package com.news.app.feature.news.di
 
-import com.news.app.core.data.remote.news.NewsApi
+import com.news.app.feature.news.data.remote.NewsApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 @Module
 @InstallIn(SingletonComponent::class)
-object NewsModule {
+object NewsApiModule {
 
     @Provides
     @Singleton

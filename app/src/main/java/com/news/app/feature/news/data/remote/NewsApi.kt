@@ -1,7 +1,7 @@
-package com.news.app.core.data.remote.news
+package com.news.app.feature.news.data.remote
 
 import com.news.app.BuildConfig
-import com.news.app.core.data.remote.news.model.ArticleResponse
+import com.news.app.feature.news.data.remote.model.ArticleResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

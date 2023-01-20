@@ -1,7 +1,7 @@
-package com.news.app.core.data.preferences
+package com.news.app.feature.news.data.preferences
 
 import android.content.SharedPreferences
-import com.news.app.core.domain.preferences.Preferences
+import com.news.app.feature.news.domain.preferences.Preferences
 import javax.inject.Inject
 
 class NewsPreferences @Inject constructor(

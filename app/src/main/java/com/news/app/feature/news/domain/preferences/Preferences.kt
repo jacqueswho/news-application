@@ -1,4 +1,4 @@
-package com.news.app.core.domain.preferences
+package com.news.app.feature.news.domain.preferences
 
 interface Preferences {
 

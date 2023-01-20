@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import com.news.app.core.data.repository.NewsRepositoryImpl
+import com.news.app.feature.news.data.repository.NewsRepositoryImpl
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

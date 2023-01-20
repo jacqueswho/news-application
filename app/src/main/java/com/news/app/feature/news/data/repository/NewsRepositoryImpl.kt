@@ -1,12 +1,12 @@
-package com.news.app.core.data.repository
+package com.news.app.feature.news.data.repository
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.liveData
-import com.news.app.core.data.preferences.NewsPreferences
-import com.news.app.core.data.remote.news.NewsApi
-import com.news.app.core.domain.respository.NewsRepository
 import com.news.app.feature.news.data.NewsPagingSource
+import com.news.app.feature.news.data.preferences.NewsPreferences
+import com.news.app.feature.news.data.remote.NewsApi
+import com.news.app.feature.news.domain.repository.NewsRepository
 import javax.inject.Inject
 import javax.inject.Singleton
 
